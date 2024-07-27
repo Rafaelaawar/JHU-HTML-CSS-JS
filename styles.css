@@ -1,0 +1,71 @@
+/* Reset some basic elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.section {
+  border: 1px solid black;
+  padding: 20px;
+  position: relative;
+  background-color: #f0f0f0;
+}
+
+.section .title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ffcccc;
+  padding: 5px;
+  border: 1px solid black;
+  font-size: 1.25em;
+}
+
+.section p {
+  margin-top: 40px;
+}
+
+/* Desktop view */
+@media (min-width: 992px) {
+  .section {
+    width: 31.33%;
+  }
+}
+
+/* Tablet view */
+@media (min-width: 768px) and (max-width: 991px) {
+  .section:nth-child(1), .section:nth-child(2) {
+    width: 48%;
+  }
+  .section:nth-child(3) {
+    width: 100%;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+  .section {
+    width: 100%;
+  }
+}
